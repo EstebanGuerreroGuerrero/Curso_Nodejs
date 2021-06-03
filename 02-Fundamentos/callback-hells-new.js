@@ -1,38 +1,41 @@
-let empleados = [{
-    id: 1,
-    nombre: 'Fernando'
-}, {
-    id: 2,
-    nombre: 'Melissa'
-}, {
-    id: 3,
-    nombre: 'Juan'
-}];
 
 
-let salarios = [{
-    id: 1,
-    salarios: 1000
-}, {
-    id: 2,
-    salario: 2000
-}]
+    const empleados = [{
+        id: 1,
+        nombre: 'Fernando'
+    }, {
+        id: 2,
+        nombre: 'Melissa'
+    }, {
+        id: 3,
+        nombre: 'Juan'
+    }];
 
-let getEmpleado = (id, callback) => {
 
-    let empleadoDB = empleados.find(empleado => empleado.id == id)
+    const salarios = [{
+        id: 1,
+        salarios: 1000
+    }, {
+        id: 2,
+        salario: 2000
+    }]
+
+const getEmpleado = (id, callback) => {
+
+    
+    const empleadoDB = empleados.find(e => e.id == id)?.nombre; //SI el resultado eiste ? traeme el nombre
 
     if (!empleadoDB) {
         callback(`No existe un empleado con el ID ${ id }`);
     } else {
         callback(null, empleadoDB);
     }
-
 }
 
-let getSalario = (empleado, callback) => {
 
-    let salarioEMP = salarios.find(salario => salario.id === empleado.id);
+const getSalario = (empleado, callback) => {
+
+    const salarioEMP = salarios.find( s => s.id === id)?.salario
 
     if (!salarioEMP) {
         callback(`NO se encontro un salario para el usuario ${ empleado.nombre }`);

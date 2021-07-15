@@ -58,6 +58,7 @@
                         console.log(`${'Mínima'.green}: `,clima.min);
                         console.log(`${'Máxima'.green}: `,clima.max);
                         console.log(`${'Como está el Clima'.green}: `,clima.desc);
+                        
                 break;
 
 

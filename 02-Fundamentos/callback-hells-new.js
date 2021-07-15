@@ -23,7 +23,7 @@
 const getEmpleado = (id, callback) => {
 
     
-    const empleadoDB = empleados.find(e => e.id == id)?.nombre; //SI el resultado eiste ? traeme el nombre
+    const empleadoDB = empleados.find(e => e.id == id)?.nombre; //SI el resultado existe ? traeme el nombre
 
     if (!empleadoDB) {
         callback(`No existe un empleado con el ID ${ id }`);

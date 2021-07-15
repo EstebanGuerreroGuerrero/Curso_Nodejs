@@ -2,7 +2,7 @@
  * Async Await
  */
 
-
+// Modelo de empleados
  const empleados = [{
     id: 1,
     nombre: 'Fernando'
@@ -14,7 +14,7 @@
     nombre: 'Juan'
 }];
 
-
+// Modelo salarios
 const salarios = [{
     id: 1,
     salario: 1000
@@ -28,9 +28,9 @@ const getEmpleado = (id) => {
 
     const promesa = new Promise(( resolve, reject ) => {
 
-        const empleado = empleados.find( e => e.id === id ) ?.nombre;
+        const empleado = empleados.find( e => e.id === id ) ?.nombre; // find: Para buscar uno y le mandamos como quermos llamarlo y compararlo o cualquier cosa jjjaa.
 
-        //Se puede hacer con un If o con un ternario como se ve a continuacion
+        //Se puede hacer con un If normal o con un ternario como se ve a continuacion
          ( empleado ) 
             ? resolve( empleado ) 
             : reject (`No existe empleado con id ${ id }`);

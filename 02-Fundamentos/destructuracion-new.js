@@ -2,7 +2,7 @@
 
 
 const deadpool = {
-
+    
     nombre: 'Wade',
     apellido: 'Winston',
     poder: 'Volar',
